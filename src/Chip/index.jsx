@@ -5,6 +5,7 @@ import Chip from '@material-ui/core/Chip';
 const useStyles = makeStyles(theme => ({
     chip: ({ color, height }) => ({
         display: 'inline-flex',
+        position: 'relative',
         margin: 0,
         height: height || 25,
         background: color || theme.palette.secondary.main,

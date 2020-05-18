@@ -1,40 +1,43 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
+import CardLandscape from './CardLandscape'
+import ChipContainer from '../Chip'
 
 const useStyles = makeStyles(theme => ({
-	plans: ({ width, height, bgSize, borderRadius, image }) => ({
-		backgroundImage: `url(${image || 'http://clarovideocdn5.clarovideo.net/pregeneracion//cms/images/202001/75478_Default_Passangers-now_16154434.jpg'})`,
-		position: 'relative',
-		margin: height * 0.06,
-		backgroundSize: bgSize || 290,
-		padding: 10,
-		border: `1px solid ${theme.palette.primary.main}`,
-		borderRadius: borderRadius || 6,
-		boxShadow: '0 3px 5px 2px rgba(0, 0, 0, .3)',
-		height: height || 145,
-		width: width || 290,
-		display: 'flex',
-		justifyContent: 'flex-start',
-		alignItems: 'flex-start',
-		"&:hover": {
-			width: width + width * 0.06,
-			height: height + height * 0.13,
-			backgroundSize: bgSize + bgSize * 0.13,
-			margin: 0
-		},
-		"&:focus": {
-			width: width + width * 0.13,
-			height: height + height * 0.13,
-			backgroundSize: bgSize + bgSize * 0.13,
-			marginTop: 0,
-		}
-	}),
-	typography: ({ width }) => ({
+	channelsPlans: {
+		fontWeight: 900,
+		fontSize: 20,
+		margin: '3px 0 0 10px',
 		color: 'white',
-		marginTop: 10,
-		width: width || 290
-	})
+		position: 'relative'
+	},
+	pricePlans: {
+		textAlign: 'center',
+		width: '100%',
+		padding: 0,
+		color: 'white',
+		position: 'relative',
+		margin: '20px 0',
+
+		'& b': {
+			fontSize: 28,
+    		fontWeight: 500,
+		}
+	},
+	listChannelsPlans: {
+		width: '100%',
+		padding: 0,
+		listStyle: 'none',
+		overflow: 'hidden',
+		display: 'flex',
+		position: 'relative',
+
+		'& li': {
+			'& img': {
+				width: '100%',
+			}
+		}
+	}
 }));
 
 const CardPlans = ({ width, height, bgSize, borderRadius, title = false, image, children }) => {
@@ -42,16 +45,29 @@ const CardPlans = ({ width, height, bgSize, borderRadius, title = false, image, 
 	const classes = useStyles({ width, height, bgSize, borderRadius, image });
 
 	return (
-		<React.Fragment>
-			<div className={`${classes.plans}`}>
-				{children}
+		<CardLandscape
+			bgSize={'cover'}
+			borderRadius={6}
+			height={180}
+			image="http://netb.tmsimg.com/assets/p9087912_v_h2_ac.jpg"
+			width={290}
+			opacity
+		>
+			<ChipContainer title="novo" />
+			<div className={classes.channelsPlans}>
+				8 canais
 			</div>
-			{title &&
-				<Typography className={classes.typography} variant="body1" noWrap>
-					{title}
-				</Typography>
-			}
-		</React.Fragment>
+			<div className={classes.pricePlans}>
+				<p>R$<b>1</b>,09/dia</p>
+			</div>
+			<ul className={classes.listChannelsPlans}>
+				<li><img src="https://assetsnx.clarobrasil.mobi/assets/s54680_lw_h3_ab.png" alt="O MELHOR DO ESPORTE" /></li>
+				<li><img src="https://assetsnx.clarobrasil.mobi/assets/s54680_lw_h3_ab.png" alt="O MELHOR DO ESPORTE" /></li>
+				<li><img src="https://assetsnx.clarobrasil.mobi/assets/s54680_lw_h3_ab.png" alt="O MELHOR DO ESPORTE" /></li>
+				<li><img src="https://assetsnx.clarobrasil.mobi/assets/s54680_lw_h3_ab.png" alt="O MELHOR DO ESPORTE" /></li>
+				<li><img src="https://assetsnx.clarobrasil.mobi/assets/s54680_lw_h3_ab.png" alt="O MELHOR DO ESPORTE" /></li>
+			</ul>
+		</CardLandscape>
 	)
 }
 export default CardPlans

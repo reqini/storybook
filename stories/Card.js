@@ -5,6 +5,7 @@ import CardLandscape from '../src/Cards/CardLandscape'
 import CardTalent from '../src/Cards/CardTalent'
 import CardSearch from '../src/Cards/CardSearch'
 import CardRents from '../src/Cards/CardRents'
+import CardPlans from '../src/Cards/CardPlans'
 import ChipContainer from '../src/Chip'
 
 const stories = storiesOf('Cards', module)
@@ -47,6 +48,18 @@ stories.add('search', () =>
 
 stories.add('rents', () =>
 	<CardRents
+		title={text('Titulo', 'Titulo de ejemplo de una pelicula')}
+		subTitle={text('sub titulo', 'ontem as 17h')}
+		width={number('width', 290)}
+		height={number('height', 210)}
+		bgSize={text('size background', '100%')}
+		image={text('image', 'http://netb.tmsimg.com/assets/p9087912_v_h2_ac.jpg')}
+		borderRadius={number('border radius', 6)}
+	/>
+)
+
+stories.add('plans', () =>
+	<CardPlans
 		title={text('Titulo', 'Titulo de ejemplo de una pelicula')}
 		subTitle={text('sub titulo', 'ontem as 17h')}
 		width={number('width', 290)}
