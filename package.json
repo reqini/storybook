@@ -99,7 +99,7 @@
 		"mocha-wrap": "^2.1.2",
 		"moment": "^2.20.1",
 		"moment-jalaali": "^0.9.1",
-		"node-sass": "^4.13.0",
+		"node-sass": "^7.0.0",
 		"nyc": "^14.1.1",
 		"prettier": "^1.19.1",
 		"raw-loader": "^4.0.0",
