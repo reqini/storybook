@@ -130,7 +130,7 @@
 		"google-map-react": "^1.1.5",
 		"immutability-helper": "^3.0.1",
 		"is-touch-device": "^1.0.1",
-		"jsdom": "^15.2.1",
+		"jsdom": "^16.5.0",
 		"keycode": "^2.2.0",
 		"lodash": "^4.17.15",
 		"moment-duration-format": "^2.3.2",
