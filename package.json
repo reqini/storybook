@@ -123,7 +123,7 @@
 		"autosuggest-highlight": "^3.1.1",
 		"classnames": "^2.2.6",
 		"consolidated-events": "^2.0.2",
-		"crypto-js": "^3.1.9-1",
+		"crypto-js": "^3.2.1",
 		"dotenv": "^8.2.0",
 		"downshift": "^3.4.5",
 		"formik": "^2.0.6",
